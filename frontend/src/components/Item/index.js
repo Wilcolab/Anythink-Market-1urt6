@@ -50,7 +50,7 @@ class Item extends React.Component {
           <div className="row bg-white p-4">
             <div className="col-6">
               <img
-                src={ require('../../imgs/placeholder.png')}
+                src={require("../../imgs/placeholder.png")}
                 defaultSource={this.props.item.image}
                 alt={this.props.item.title}
                 className="item-img"
