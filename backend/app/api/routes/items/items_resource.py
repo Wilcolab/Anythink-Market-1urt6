@@ -30,7 +30,6 @@ router = APIRouter()
 
 @router.get("", response_model=ListOfItemsInResponse, name="items:list-items")
 async def list_items(
-    title: Optional[str] = Depends(get_items_filters),
     items_filters: ItemsFilters = Depends(get_items_filters),
     user: Optional[User] = Depends(get_current_user_authorizer(required=False)),
     items_repo: ItemsRepository = Depends(get_repository(ItemsRepository)),
